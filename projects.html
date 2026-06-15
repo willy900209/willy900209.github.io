@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | 蔡詔崴</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="assets/resume.pdf" target="_blank">Resume</a>
+  </nav>
+
+  <section>
+    <h1>Projects</h1>
+    <p>
+      This page presents selected projects in statistical modeling, machine learning,
+      image processing, and data analysis.
+    </p>
+
+    <div class="project-card">
+      <h2>碩士論文:日冕洞演化對太陽風的影響</h2>
+      <p>
+        本研究以 SDO/AIA 193 Å 太陽影像與 OMNI 每小時太陽風速度資料為基礎，
+        建立日冕洞特徵擷取與太陽風速度預測流程。
+      </p>
+
+      <p>
+        研究流程首先對太陽影像進行前處理，包括亮度轉換、太陽盤面遮罩、
+        邊緣亮度修正與雜訊排除。接著使用 K-Means 分群、形態學處理與面積篩選方法，
+        從太陽盤面中擷取日冕洞候選區域，並計算其面積、亮度、形態、空間位置與時間演化特徵。
+      </p>
+
+      <p>
+        在模型建構方面，本研究以 XGBoost 建立雙模型架構，
+        分別捕捉整體太陽風速度趨勢與高速太陽風峰值變化。
+        最後透過動態融合與傳播延遲修正機制，改善太陽端日冕洞特徵與地球端太陽風觀測之間的時間對齊問題，
+        並使用 SHAP 分析模型預測結果與重要特徵。
+      </p>
+      <p class="tags">Python / OpenCV / XGBoost / SHAP / Time Series</p>
+    </div>
+
+    <div class="project-card">
+      <h2>學術期刊 : An Adaptive Image-Processing Pipeline for Coronal-Hole Candidate Extraction from Full-Disk SDO/AIA 193 A Images</h2>
+      <p>
+        本專案為碩士論文延伸之影像處理研究，主題為「以自適應影像處理流程擷取 SDO/AIA 193 Å 太陽全盤面影像中的日冕洞候選區域」。日冕洞是高速太陽風的重要來源之一，因此能否穩定且可重現地從太陽影像中擷取日冕洞結構，對後續太陽風分析與太空天氣研究具有重要意義。
+      </p>
+      <p>
+        本專案以 SDO/AIA 193 Å 太陽全盤面影像作為資料來源，設計一套完整的日冕洞候選區域擷取流程。首先透過 Asinh 非線性亮度轉換強化低亮度區域，使日冕洞等暗區結構更加清楚；接著利用 FITS 標頭資訊建立動態太陽盤面遮罩，排除盤面外背景干擾。為降低太陽盤面徑向亮度差異造成的分割不穩定，本專案進一步建立徑向背景亮度校正方法，再搭配 K-Means 自適應閾值分割擷取初步候選區域。
+      </p>
+      <p>
+        在後處理階段，本專案結合混合形態學處理與連通區域篩選機制，透過核心重疊比例、區域面積與鄰近距離等條件，保留主要且結構連續的低亮度區域，同時移除零散雜訊與不穩定碎片。相較於傳統 Otsu 閾值法、灰階累積閾值法與標準 K-Means 分割，本方法更重視日冕洞區域的結構完整性與結果穩定性。
+      </p>
+      <p>
+        此專案展現我在影像前處理、二值化分割、形態學運算、連通區域分析與科學資料處理上的實作能力，也呈現我能將統計與程式能力應用於跨領域太陽影像資料分析，並建立可重現的自動化處理流程。
+      </p>
+      <p class="tags">Python / OpenCV / Image Processing / K-Means Segmentation / Morphology / Solar Image Analysis</p>
+    </div>
+
+   <div class="project-card">
+  <h2>114年國道智慧交通管理創意競賽</h2>
+
+  <p>
+    本專案參與交通部舉辦之「114 年國道智慧交通管理創意競賽」，
+    主要目標為提升國道交通狀態預測之準確性。除使用主辦單位提供之交通資料外，
+    亦額外蒐集外部資料，以補足影響交通流量與壅塞狀況之相關因素。
+  </p>
+
+  <p>
+    針對不同資料特性，本專案進行適當的資料前處理，
+    包括缺失值填補、異常值與錯誤數值排除等步驟，
+    確保後續模型訓練資料之品質與穩定性。
+  </p>
+
+  <p>
+    在模型建構方面，將處理後之資料導入機器學習模型進行預測，
+    並結合短期趨勢判別模型，進一步修正與強化最終預測結果。
+  </p>
+
+  <p>
+    為提升作品完整性與實用性，本專案亦設計使用者互動式介面，
+    讓使用者能夠更直觀地查看預測結果與交通資訊，
+    並建立資料即時更新機制，使系統能反映最新交通狀態。
+  </p>
+
+  <p class="tags">
+    Machine Learning / Data Preprocessing / Forecasting / Traffic Data Analysis / Interactive Dashboard
+  </p>
+</div>
+
+  </section>
+
+</body>
+</html>
