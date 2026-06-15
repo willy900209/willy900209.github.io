@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -8,96 +9,220 @@
 </head>
 
 <body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Tsai Zhou-Wei</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="assets/resume.pdf" target="_blank">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <header class="hero">
-    <h1>蔡詔崴</h1>
-    <h2>Statistics & Machine Learning Portfolio</h2>
+    <div class="hero-content">
+
+
+  <img src="assets/profile.jpg" alt="蔡詔崴 profile photo" class="profile-photo">
+
+  <div class="hero-text">
+    <p class="hero-label">Statistics & Machine Learning Portfolio</p>
+    <h1>蔡詔崴 <span>(Zhou-Wei Tsai)</span></h1>
+    <h2>Data Analysis · Machine Learning · Image Processing</h2>
     <p>
       I am a statistics graduate student with experience in machine learning,
       image processing, time series modeling, and interpretable data analysis.
     </p>
+
+    <div class="hero-buttons">
+      <a href="projects.html" class="btn primary-btn">View Projects</a>
+      <a href="assets/resume.pdf" target="_blank" class="btn secondary-btn">Download Resume</a>
+    </div>
+  </div>
+
+</div>
+
+
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
-    <p>
-      我是蔡詔崴，畢業於國立臺北大學統計研究所，具備統計分析、資料處理、機器學習建模與影像資料分析經驗。研究所期間，我的研究主題聚焦於日冕洞演化對太陽風速變化之影響，主要結合太陽盤面影像處理、日冕洞特徵擷取、時間序列資料整理與機器學習模型，建立太陽風速預測與分析流程。
-    </p>
-    <p>
-      在研究過程中，我使用 Python 進行大量資料處理與模型建構，包含影像前處理、遮罩建立、特徵擷取、時間滯後特徵設計、資料合併、模型訓練與預測結果評估。曾使用 pandas、NumPy、matplotlib、OpenCV、scikit-learn 與 XGBoost 等工具，處理太陽影像資料與太陽風時間序列資料，並進行特徵工程、模型比較與結果視覺化。
-    </p>
-    <p>
-      除了 Python 外，我也具備 R 語言資料分析能力，能進行資料清理、描述性統計、假設檢定、迴歸分析與圖表呈現；SQL 方面則具備基礎查詢能力，可進行資料篩選、分組彙整與資料表合併。整體而言，我具備從資料前處理、特徵建構、統計分析、模型訓練到結果解釋的完整資料分析經驗。
-    </p>
-    <p>
-      未來希望投入資料分析、統計分析、機器學習建模或研究資料處理相關職務，將統計背景與程式能力應用於實務資料分析問題，協助團隊從複雜資料中建立可解釋且具應用價值的分析結
-    </p>
+
+
+<div class="content-card">
+  <p>
+    我是蔡詔崴，畢業於國立臺北大學統計研究所，具備統計分析、資料處理、機器學習建模與影像資料分析經驗。
+    研究所期間，我的研究主題聚焦於日冕洞演化對太陽風速變化之影響，主要結合太陽盤面影像處理、
+    日冕洞特徵擷取、時間序列資料整理與機器學習模型，建立太陽風速預測與分析流程。
+  </p>
+
+  <p>
+    在研究過程中，我使用 Python 進行大量資料處理與模型建構，包含影像前處理、遮罩建立、特徵擷取、
+    時間滯後特徵設計、資料合併、模型訓練與預測結果評估。曾使用 pandas、NumPy、matplotlib、OpenCV、
+    scikit-learn 與 XGBoost 等工具，處理太陽影像資料與太陽風時間序列資料，並進行特徵工程、
+    模型比較與結果視覺化。
+  </p>
+
+  <p>
+    除了 Python 外，我也具備 R 語言資料分析能力，能進行資料清理、描述性統計、假設檢定、
+    迴歸分析與圖表呈現；SQL 方面則具備基礎查詢能力，可進行資料篩選、分組彙整與資料表合併。
+    整體而言，我具備從資料前處理、特徵建構、統計分析、模型訓練到結果解釋的完整資料分析經驗。
+  </p>
+
+  <p>
+    未來希望投入資料分析、統計分析、機器學習建模或研究資料處理相關職務，
+    將統計背景與程式能力應用於實務資料分析問題，協助團隊從複雜資料中建立可解釋且具應用價值的分析結果。
+  </p>
+</div>
+
+
   </section>
 
-  <section>
+  <section id="education">
+    <h2>Education</h2>
+
+
+<div class="two-column">
+  <div class="education-card">
+    <h3>國立臺北大學 統計研究所</h3>
+    <p class="education-meta">Master of Science in Statistics</p>
+    <p>
+      研究主題聚焦於日冕洞影像特徵擷取與太陽風速預測，
+      結合影像處理、時間序列資料整理、機器學習建模與模型解釋方法。
+    </p>
+  </div>
+
+  <div class="education-card">
+    <h3>國立彰化師範大學 數學系</h3>
+    <p class="education-meta">Bachelor of Science in Mathematics</p>
+    <p>
+      具備數學、統計與資料分析基礎，修習機率、統計、線性代數、
+      微積分與資料分析相關課程，並延伸應用於程式設計與模型建構。
+    </p>
+  </div>
+</div>
+
+
+  </section>
+
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-      <span>Python</span>
-      <span>R</span>
-      <span>SAS</span>
-      <span>Machine Learning</span>
-      <span>XGBoost</span>
-      <span>SHAP</span>
-      <span>OpenCV</span>
-      <span>Time Series</span>
-      <span>Statistical Modeling</span>
-      <span>LaTeX</span>
-    </div>
-  </section>
 
-  <section>
-    <h2>
-      <a href="projects.html" class="section-link">Projects</a>
-    </h2>
 
-    <div class="project-card">
-      <h3>Solar Wind Prediction from Coronal Hole Images</h3>
-      <p>
-        使用 SDO/AIA 193 Å 太陽影像進行日冕洞結構擷取，結合影像處理、
-        特徵工程、XGBoost 模型與 SHAP 解釋方法，預測太陽風速變化。
-      </p>
-      <p class="tags">Python / OpenCV / XGBoost / SHAP / Time Series</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Clinical Data Analysis with Propensity Score Methods</h3>
-      <p>
-        針對臨床觀察性資料進行 treatment effect 分析，使用 Propensity Score
-        regression、matching、stratification、IPTW、Bootstrap CI 與 Bayesian methods
-        比較不同方法下的估計結果。
-      </p>
-      <p class="tags">R / Propensity Score / Bootstrap / Bayesian Analysis</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Time Series Modeling</h3>
-      <p>
-        建立 SARIMA 模型，進行模型識別、參數估計、殘差診斷與外部預測，
-        並比較 AIC/BIC 與不同模型設定下的預測表現。
-      </p>
-      <p class="tags">R / SARIMA / Forecasting / Model Diagnostics</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Resume</h2>
+<div class="skill-grid">
+  <div class="skill-card">
+    <h3>Python</h3>
     <p>
-      <a href="assets/resume.pdf" target="_blank">Download My Resume</a>
+      具備 Python 資料處理、模型建構與影像處理經驗。能使用 pandas、NumPy
+      進行資料清理、欄位轉換、資料合併、缺失值處理與描述性統計分析，
+      並能以 matplotlib 進行資料視覺化。曾使用 scikit-learn、XGBoost
+      進行特徵工程、模型訓練、預測與模型評估。
     </p>
+  </div>
+
+  <div class="skill-card">
+    <h3>影像處理與資料分析應用</h3>
+    <p>
+      具備 Python 影像處理與科學影像分析經驗，曾於碩士論文中處理
+      SDO/AIA 193 Å 太陽全盤面影像，進行影像前處理、亮度轉換、太陽盤面遮罩建立、
+      日冕洞區域分割、形態學處理、連通區域篩選與影像特徵擷取。
+    </p>
+  </div>
+
+  <div class="skill-card">
+    <h3>SQL</h3>
+    <p>
+      具備基礎 SQL 資料擷取能力，能依分析需求撰寫查詢語法，進行資料篩選、
+      分組統計、資料表串接與初步檢查，並搭配 Python 或 R 進行後續資料清理、
+      統計分析與模型建構。
+    </p>
+  </div>
+
+  <div class="skill-card">
+    <h3>R</h3>
+    <p>
+      熟悉 R 語言於統計分析與資料處理之應用，能使用 dplyr、tidyr 進行資料清理、
+      欄位轉換、資料篩選與彙整，並能運用 ggplot2 進行資料視覺化。具備敘述統計、
+      假設檢定、迴歸分析與模型結果整理經驗。
+    </p>
+  </div>
+</div>
+
+
   </section>
 
-  <section>
+  <section id="projects">
+    <div class="section-title-row">
+      <h2>Projects</h2>
+      <a href="projects.html" class="view-more">View More →</a>
+    </div>
+
+
+<div class="project-grid">
+  <div class="project-card">
+    <h3>Solar Wind Prediction from Coronal Hole Images</h3>
+    <p>
+      使用 SDO/AIA 193 Å 太陽影像進行日冕洞結構擷取，結合影像處理、
+      特徵工程、XGBoost 模型與 SHAP 解釋方法，預測太陽風速變化。
+    </p>
+    <p class="tags">Python / OpenCV / XGBoost / SHAP / Time Series</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Clinical Data Analysis with Propensity Score Methods</h3>
+    <p>
+      針對臨床觀察性資料進行 treatment effect 分析，使用 Propensity Score
+      regression、matching、stratification、IPTW、Bootstrap CI 與 Bayesian methods
+      比較不同方法下的估計結果。
+    </p>
+    <p class="tags">R / Propensity Score / Bootstrap / Bayesian Analysis</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Time Series Modeling</h3>
+    <p>
+      建立 SARIMA 模型，進行模型識別、參數估計、殘差診斷與外部預測，
+      並比較 AIC/BIC 與不同模型設定下的預測表現。
+    </p>
+    <p class="tags">R / SARIMA / Forecasting / Model Diagnostics</p>
+  </div>
+</div>
+
+
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+
+
+<div class="resume-card">
+  <p>
+    Download the latest version of my resume in PDF format.
+  </p>
+  <a href="assets/resume.pdf" target="_blank" class="btn primary-btn">Download Resume</a>
+</div>
+
+
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: willy10511093@gmail.com</p>
-    <p>GitHub: github.com/willy900209</p>
+
+
+<div class="contact-card">
+  <p>Email: <a href="mailto:willy10511093@gmail.com">willy10511093@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/willy900209" target="_blank">github.com/willy900209</a></p>
+</div>
+
+
   </section>
 
   <footer>
     <p>© 2026 Tsai Zhou-Wei</p>
   </footer>
+
 </body>
 </html>
