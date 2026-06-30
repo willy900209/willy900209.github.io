@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="projects-page">
 
   <nav class="navbar">
     <div class="nav-logo">Tsai Zhou-Wei</div>
@@ -316,6 +316,138 @@
   </div>
 </div>
 
+<!-- Project 6 -->
+<div class="project-card">
+  <h2>Document Corner Detection and Perspective Correction using OpenCV and CNN</h2>
+
+  <p>
+    本專案以文件影像角點偵測與透視校正為主題，建立一套從文件四角點定位、
+    透視轉換到影像增強的完整流程。專案目標是將手機拍攝中常見的傾斜文件、
+    透視變形文件與背景干擾影像，轉換為接近正面掃描的文件結果。
+  </p>
+
+  <p>
+    在方法設計上，本專案先使用資料集提供的 ground truth 四角點建立理想透視校正基準，
+    接著建立基於 OpenCV 的 contour-based baseline，包含灰階轉換、CLAHE 對比增強、
+    Canny edge detection、morphological operation、contour detection 與四邊形篩選。
+    此方法可作為傳統影像處理基準，用於比較深度學習模型的改善幅度。
+  </p>
+
+  <p>
+    在深度學習模型方面，本專案建立小型 CNN 與 pretrained ResNet18 corner regression model，
+    直接預測文件左上、右上、右下與左下四個角點座標。為提升模型對文件邊界與角點細節的辨識能力，
+    ResNet18 模型採用 384 × 384 輸入解析度、Smooth L1 loss、AdamW optimizer，
+    並加入資料增強以提升模型穩定性。
+  </p>
+
+  <p>
+    實驗結果顯示，OpenCV baseline 在複雜背景與邊界不完整影像中穩定性不足；
+    小型 CNN 能明顯降低角點誤差，而 ResNet18 進一步提升整體表現。
+    後續加入 MIDV-500 與 SmartDoc 2015 Challenge 1 進行外部資料擴充後，
+    ResNet18 V2 在混合 test set 上達到 mean corner error = 41.20 pixels，
+    median error = 18.14 pixels，顯示外部資料擴充對文件角點定位具有明顯幫助。
+  </p>
+
+  <p>
+    此專案展現我在 OpenCV 影像處理、CNN/ResNet 模型訓練、角點座標回歸、
+    透視幾何校正、資料擴充、模型評估與 worst-case analysis 上的實作能力，
+    也呈現我能將傳統影像處理方法與深度學習模型整合成完整的文件影像前處理系統。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project6/fig1.jpg" alt="Document corner detection workflow" class="gallery-image">
+        <img src="assets/project6/fig2.jpg" alt="OpenCV baseline result" class="gallery-image">
+        <img src="assets/project6/fig3.jpg" alt="ResNet18 corner prediction result" class="gallery-image">
+        <img src="assets/project6/fig4.jpg" alt="Perspective correction result" class="gallery-image">
+        <img src="assets/project6/fig5.png" alt="V2 source-wise analysis result" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">
+      Python / OpenCV / PyTorch / CNN / ResNet18 / Perspective Transform / Computer Vision / Document Image Processing
+    </p>
+
+    <a href="assets/project6/main.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
+
+<!-- Project 7 -->
+<div class="project-card">
+  <h2>Taiwan Real Estate Data Cleaning and Power BI Dashboard</h2>
+
+  <p>
+    本專案以台灣實價登錄買賣資料為資料來源，建立一套 PostgreSQL-based data cleaning pipeline，
+    將原始 CSV 資料匯入資料庫後，透過 SQL 完成資料清洗、資料品質檢查、分析用資料表建立，
+    並串接 Power BI 製作視覺化儀表板。
+  </p>
+
+  <p>
+    在資料處理流程上，本專案採用分層資料表設計，依序建立
+    raw table、clean table、validated table 與 analysis-ready table。
+    raw table 用於保留原始匯入資料；clean table 負責文字清理、空字串轉換與資料型態轉換；
+    validated table 則透過 SQL validation flags 標記缺失值、無效價格、無效建物面積與極端單價等資料品質問題；
+    最後建立 analysis-ready table 作為後續分析與視覺化的主要資料來源。
+  </p>
+
+  <p>
+    在 SQL 實作上，本專案使用 TRIM、NULLIF、CASE WHEN、regular expression、
+    type casting、GROUP BY 與 CREATE VIEW 等語法，完成資料清洗、數值欄位轉換、
+    資料品質檢查與 summary views 建立。建立的 views 包含行政區房價彙總、
+    建物型態房價彙總與資料品質問題統計，並作為 Power BI dashboard 的資料來源。
+  </p>
+
+  <p>
+    在視覺化方面，本專案將 PostgreSQL 資料表與 views 串接至 Power BI，
+    建立地區房價總覽、行政區平均單價與交易量關係、不同建物型態比較、
+    建物面積與交易總價關係，以及資料品質問題統計等圖表。
+    此專案展現我在 SQL 資料清洗、資料庫流程設計、資料品質控管與 BI 視覺化整合上的實作能力。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project7/fig1.png" alt="SQL data processing pipeline" class="gallery-image">
+        <img src="assets/project7/fig2.png" alt="Power BI regional housing price overview" class="gallery-image">
+        <img src="assets/project7/fig3.png" alt="District average unit price and transaction volume scatter plot" class="gallery-image">
+        <img src="assets/project7/fig4.png" alt="Building type average unit price comparison" class="gallery-image">
+        <img src="assets/project7/fig5.png" alt="Building area and total price scatter plot" class="gallery-image">
+        <img src="assets/project7/fig6.png" alt="Data quality issue summary" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">
+      PostgreSQL / SQL / pgAdmin / Data Cleaning / Data Quality / Power BI / Dashboard / Real Estate Data Analysis
+    </p>
+
+    <a href="assets/project7/main.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
 
   <footer>
     <p>© 2026 Tsai Zhou-Wei</p>
