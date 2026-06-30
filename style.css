@@ -815,3 +815,30 @@ footer {
   transform: none;
   box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
 }
+
+/* Skills logo header */
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+/* Skill icons: larger square style */
+.skill-logo {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+
+  object-fit: contain;
+  border-radius: 12px;
+
+  background: #ffffff;
+  padding: 8px;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.skill-header h3 {
+  margin: 0;
+}
