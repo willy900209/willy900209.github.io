@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -10,89 +11,376 @@
 <body>
 
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="assets/resume.pdf" target="_blank">Resume</a>
+    <div class="nav-logo">Tsai Zhou-Wei</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="assets/resume.pdf" target="_blank">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </nav>
 
-  <section>
-    <h1>Projects</h1>
-    <p>
-      This page presents selected projects in statistical modeling, machine learning,
-      image processing, and data analysis.
-    </p>
+  <section id="projects">
+    <h2>Projects</h2>
 
-    <div class="project-card">
-      <h2>碩士論文:日冕洞演化對太陽風的影響</h2>
-      <p>
-        本研究以 SDO/AIA 193 Å 太陽影像與 OMNI 每小時太陽風速度資料為基礎，
-        建立日冕洞特徵擷取與太陽風速度預測流程。
-      </p>
 
-      <p>
-        研究流程首先對太陽影像進行前處理，包括亮度轉換、太陽盤面遮罩、
-        邊緣亮度修正與雜訊排除。接著使用 K-Means 分群、形態學處理與面積篩選方法，
-        從太陽盤面中擷取日冕洞候選區域，並計算其面積、亮度、形態、空間位置與時間演化特徵。
-      </p>
+<div class="content-card">
+  <p>
+    This page presents selected projects in statistical modeling, machine learning,
+    image processing, time series modeling, and data analysis.
+  </p>
+</div>
 
-      <p>
-        在模型建構方面，本研究以 XGBoost 建立雙模型架構，
-        分別捕捉整體太陽風速度趨勢與高速太陽風峰值變化。
-        最後透過動態融合與傳播延遲修正機制，改善太陽端日冕洞特徵與地球端太陽風觀測之間的時間對齊問題，
-        並使用 SHAP 分析模型預測結果與重要特徵。
-      </p>
-      <p class="tags">Python / OpenCV / XGBoost / SHAP / Time Series</p>
-    </div>
-
-    <div class="project-card">
-      <h2>學術期刊 : An Adaptive Image-Processing Pipeline for Coronal-Hole Candidate Extraction from Full-Disk SDO/AIA 193 A Images</h2>
-      <p>
-        本專案為碩士論文延伸之影像處理研究，主題為「以自適應影像處理流程擷取 SDO/AIA 193 Å 太陽全盤面影像中的日冕洞候選區域」。日冕洞是高速太陽風的重要來源之一，因此能否穩定且可重現地從太陽影像中擷取日冕洞結構，對後續太陽風分析與太空天氣研究具有重要意義。
-      </p>
-      <p>
-        本專案以 SDO/AIA 193 Å 太陽全盤面影像作為資料來源，設計一套完整的日冕洞候選區域擷取流程。首先透過 Asinh 非線性亮度轉換強化低亮度區域，使日冕洞等暗區結構更加清楚；接著利用 FITS 標頭資訊建立動態太陽盤面遮罩，排除盤面外背景干擾。為降低太陽盤面徑向亮度差異造成的分割不穩定，本專案進一步建立徑向背景亮度校正方法，再搭配 K-Means 自適應閾值分割擷取初步候選區域。
-      </p>
-      <p>
-        在後處理階段，本專案結合混合形態學處理與連通區域篩選機制，透過核心重疊比例、區域面積與鄰近距離等條件，保留主要且結構連續的低亮度區域，同時移除零散雜訊與不穩定碎片。相較於傳統 Otsu 閾值法、灰階累積閾值法與標準 K-Means 分割，本方法更重視日冕洞區域的結構完整性與結果穩定性。
-      </p>
-      <p>
-        此專案展現我在影像前處理、二值化分割、形態學運算、連通區域分析與科學資料處理上的實作能力，也呈現我能將統計與程式能力應用於跨領域太陽影像資料分析，並建立可重現的自動化處理流程。
-      </p>
-      <p class="tags">Python / OpenCV / Image Processing / K-Means Segmentation / Morphology / Solar Image Analysis</p>
-    </div>
-
-   <div class="project-card">
-  <h2>114年國道智慧交通管理創意競賽</h2>
+<!-- Project 1 -->
+<div class="project-card">
+  <h2>碩士論文：日冕洞演化對太陽風的影響</h2>
 
   <p>
-    本專案參與交通部舉辦之「114 年國道智慧交通管理創意競賽」，
-    主要目標為提升國道交通狀態預測之準確性。除使用主辦單位提供之交通資料外，
-    亦額外蒐集外部資料，以補足影響交通流量與壅塞狀況之相關因素。
+    本研究以 SDO/AIA 193 Å 太陽影像與 OMNI 每小時太陽風速度資料為基礎，
+    建立日冕洞特徵擷取與太陽風速度預測流程。
   </p>
 
   <p>
-    針對不同資料特性，本專案進行適當的資料前處理，
-    包括缺失值填補、異常值與錯誤數值排除等步驟，
+    研究流程首先對太陽影像進行前處理，包括亮度轉換、太陽盤面遮罩、
+    邊緣亮度修正與雜訊排除。接著使用 K-Means 分群、形態學處理與面積篩選方法，
+    從太陽盤面中擷取日冕洞候選區域，並計算其面積、亮度、形態、空間位置與時間演化特徵。
+  </p>
+
+  <p>
+    在模型建構方面，本研究以 XGBoost 建立雙模型架構，分別捕捉整體太陽風速度趨勢與高速太陽風峰值變化。
+    最後透過動態融合與傳播延遲修正機制，改善太陽端日冕洞特徵與地球端太陽風觀測之間的時間對齊問題，
+    並使用 SHAP 分析模型預測結果與重要特徵。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project1/fig1.png" alt="Thesis figure 1" class="gallery-image">
+        <img src="assets/project1/fig2.png" alt="Thesis figure 2" class="gallery-image">
+        <img src="assets/project1/fig3.png" alt="Thesis figure 3" class="gallery-image">
+        <img src="assets/project1/fig4.jpg" alt="Thesis figure 4" class="gallery-image">
+        <img src="assets/project1/fig5.png" alt="Thesis figure 5" class="gallery-image">
+        <img src="assets/project1/fig6.png" alt="Thesis figure 5" class="gallery-image">
+        <img src="assets/project1/fig7.png" alt="Thesis figure 5" class="gallery-image">
+        <img src="assets/project1/fig8.png" alt="Thesis figure 5" class="gallery-image">
+        <img src="assets/project1/fig9.png" alt="Thesis figure 5" class="gallery-image">
+        <img src="assets/project1/fig10.png" alt="Thesis figure 5" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">Python / OpenCV / XGBoost / SHAP / Time Series / Feature Engineering</p>
+
+    <a href="assets/project1/thesis.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
+
+
+<!-- Project 2 -->
+<div class="project-card">
+  <h2>學術期刊：An Adaptive Image-Processing Pipeline for Coronal-Hole Candidate Extraction from Full-Disk SDO/AIA 193 Å Images</h2>
+
+  <p>
+    本專案為碩士論文延伸之影像處理研究，主題為「以自適應影像處理流程擷取
+    SDO/AIA 193 Å 太陽全盤面影像中的日冕洞候選區域」。日冕洞是高速太陽風的重要來源之一，
+    因此能否穩定且可重現地從太陽影像中擷取日冕洞結構，對後續太陽風分析與太空天氣研究具有重要意義。
+  </p>
+
+  <p>
+    本專案以 SDO/AIA 193 Å 太陽全盤面影像作為資料來源，設計一套完整的日冕洞候選區域擷取流程。
+    首先透過 Asinh 非線性亮度轉換強化低亮度區域，使日冕洞等暗區結構更加清楚；接著利用 FITS
+    標頭資訊建立動態太陽盤面遮罩，排除盤面外背景干擾。為降低太陽盤面徑向亮度差異造成的分割不穩定，
+    本專案進一步建立徑向背景亮度校正方法，再搭配 K-Means 自適應閾值分割擷取初步候選區域。
+  </p>
+
+  <p>
+    在後處理階段，本專案結合混合形態學處理與連通區域篩選機制，透過核心重疊比例、區域面積與鄰近距離等條件，
+    保留主要且結構連續的低亮度區域，同時移除零散雜訊與不穩定碎片。相較於傳統 Otsu 閾值法、
+    灰階累積閾值法與標準 K-Means 分割，本方法更重視日冕洞區域的結構完整性與結果穩定性。
+  </p>
+
+  <p>
+    此專案展現我在影像前處理、二值化分割、形態學運算、連通區域分析與科學資料處理上的實作能力，
+    也呈現我能將統計與程式能力應用於跨領域太陽影像資料分析，並建立可重現的自動化處理流程。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project2/fig1.png" alt="Coronal-hole extraction figure 1" class="gallery-image">
+        <img src="assets/project2/fig2.png" alt="Coronal-hole extraction figure 2" class="gallery-image">
+        <img src="assets/project2/fig3.png" alt="Coronal-hole extraction figure 3" class="gallery-image">
+        <img src="assets/project2/fig4.png" alt="Coronal-hole extraction figure 4" class="gallery-image">
+        <img src="assets/project2/fig5.png" alt="Coronal-hole extraction figure 5" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">Python / OpenCV / Image Processing / K-Means Segmentation / Morphology / Solar Image Analysis</p>
+
+    <a href="assets/project2/paper.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
+
+<!-- Project 3 -->
+<div class="project-card">
+  <h2>114 年國道智慧交通管理創意競賽</h2>
+
+  <p>
+    本專案參與交通部舉辦之「114 年國道智慧交通管理創意競賽」，主要目標為提升國道交通狀態預測之準確性。
+    除使用主辦單位提供之交通資料外，亦額外蒐集外部資料，以補足影響交通流量與壅塞狀況之相關因素。
+  </p>
+
+  <p>
+    針對不同資料特性，本專案進行適當的資料前處理，包括缺失值填補、異常值與錯誤數值排除等步驟，
     確保後續模型訓練資料之品質與穩定性。
   </p>
 
   <p>
-    在模型建構方面，將處理後之資料導入機器學習模型進行預測，
-    並結合短期趨勢判別模型，進一步修正與強化最終預測結果。
+    在模型建構方面，將處理後之資料導入機器學習模型進行預測，並結合短期趨勢判別模型，
+    進一步修正與強化最終預測結果。
   </p>
 
   <p>
-    為提升作品完整性與實用性，本專案亦設計使用者互動式介面，
-    讓使用者能夠更直觀地查看預測結果與交通資訊，
+    為提升作品完整性與實用性，本專案亦設計使用者互動式介面，讓使用者能夠更直觀地查看預測結果與交通資訊，
     並建立資料即時更新機制，使系統能反映最新交通狀態。
   </p>
 
-  <p class="tags">
-    Machine Learning / Data Preprocessing / Forecasting / Traffic Data Analysis / Interactive Dashboard
-  </p>
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project3/fig1.png" alt="Traffic project figure 1" class="gallery-image">
+        <img src="assets/project3/fig2.png" alt="Traffic project figure 2" class="gallery-image">
+        <img src="assets/project3/fig3.png" alt="Traffic project figure 3" class="gallery-image">
+        <img src="assets/project3/fig4.png" alt="Traffic project figure 4" class="gallery-image">
+        <img src="assets/project3/fig5.png" alt="Traffic project figure 5" class="gallery-image">
+        <img src="assets/project3/fig6.png" alt="Traffic project figure 6" class="gallery-image">
+        <img src="assets/project3/fig7.jpg" alt="Traffic project figure 7" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">Machine Learning / Data Preprocessing / Forecasting / Traffic Data Analysis / Interactive Dashboard</p>
+
+    <a href="assets/project3/traffic.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
 </div>
 
-  </section>
+<!-- Project 4 -->
+<div class="project-card">
+  <h2>Industrial Defect Detection using Object Detection and Segmentation</h2>
+
+  <p>
+    本專案以 Kolektor Surface-Defect Dataset 2 作為工業表面瑕疵偵測資料集，
+    建立 YOLOv8-based industrial defect detection framework，並從 image-level screening、
+    object-level detection 與 pixel-level segmentation 三個層次評估模型表現。
+  </p>
+
+  <p>
+    在資料處理上，本專案將原始 bitmap mask 標註轉換為 YOLO detection 與 YOLO segmentation 格式，
+    使模型能同時學習 bounding box localization 與 pixel-level mask prediction。
+    由於資料集中 normal images 遠多於 defect images，因此進一步採用 normal-sample downsampling，
+    並建立 patch-based segmentation dataset，以改善小面積、低對比與不規則瑕疵在 segmentation 任務中的學習效果。
+  </p>
+
+  <p>
+    實驗結果顯示，normal = 600 的 YOLOv8n detection model 在 object-level test set 上達到
+    mAP@0.5 = 0.767 與 mAP@0.5:0.95 = 0.402。進一步將 detection confidence score 轉換為
+    image-level defect score 後，模型於 defect screening 任務上達到 F1-score = 0.852、
+    ROC-AUC = 0.960 與 PR-AUC = 0.904。
+  </p>
+
+  <p>
+    此專案展現我在 computer vision、YOLO object detection、segmentation label conversion、
+    class imbalance handling、ablation study 與模型評估上的實作能力，也呈現我能將深度學習方法
+    應用於工業品檢與瑕疵定位任務。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project4/fig1.png" alt="Industrial defect dataset examples" class="gallery-image">
+        <img src="assets/project4/fig2.png" alt="YOLOv8 object detection qualitative results" class="gallery-image">
+        <img src="assets/project4/fig3.png" alt="Normal-sample downsampling ablation study" class="gallery-image">
+        <img src="assets/project4/fig4.png" alt="Patch-based segmentation qualitative result" class="gallery-image">
+        <img src="assets/project4/fig5.png" alt="Overall comparison of defect detection tasks" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">Python / YOLOv8 / Object Detection / Segmentation / Computer Vision / Industrial Defect Detection</p>
+
+    <a href="assets/project4/main.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
+
+
+<!-- Project: CNN-Based Image Deblurring -->
+<div class="project-card">
+  <h2>CNN-Based Image Deblurring with Residual Learning</h2>
+
+  <p>
+    本專案以影像去模糊為主題，建立基於卷積神經網路（CNN）的影像復原模型。
+    模型採用 residual learning 架構，使網路不直接重建完整清晰影像，而是學習模糊影像與清晰影像之間的殘差資訊，
+    再將預測殘差加回原始模糊影像以產生去模糊結果。
+  </p>
+
+  <p>
+    在模型設計方面，本專案由 Original CNN 逐步改良至 V2、V2 Ultimate 與 V2 Ultimate-FT。
+    V2 Ultimate 加入 enhanced residual blocks、channel attention、residual scaling、EMA、資料增強與 cosine scheduler；
+    最終再以 fine-tuning 方式建立 V2 Ultimate-FT 作為最終模型。
+  </p>
+
+  <p>
+    實驗結果顯示，最終模型在 Set5 測試集上將 PSNR 由 21.55 dB 提升至 27.20 dB，
+    SSIM 由 0.878 提升至 0.980；在 Set14 測試集上，PSNR 由 20.57 dB 提升至 24.91 dB，
+    SSIM 由 0.881 提升至 0.961。本專案亦補充 ablation study、推論速度分析、訓練曲線與困難案例分析，
+    展現我在深度學習模型設計、電腦視覺實驗分析與結果解釋上的能力。
+  </p>
+
+  <div class="project-media">
+    <div class="project-gallery">
+      <button class="gallery-btn gallery-prev" type="button" aria-label="Previous image">
+        <span class="gallery-icon">‹</span>
+      </button>
+
+      <div class="gallery-stage">
+        <img src="assets/project5/fig1.png" alt="CNN deblurring model workflow" class="gallery-image">
+        <img src="assets/project5/fig2.png" alt="V2 Ultimate training curves" class="gallery-image">
+        <img src="assets/project5/fig3.png" alt="Deblurring qualitative result" class="gallery-image">
+        <img src="assets/project5/fig4.png" alt="Challenging case analysis" class="gallery-image">
+        <img src="assets/project5/fig5.png" alt="Ablation study result" class="gallery-image">
+      </div>
+
+      <button class="gallery-btn gallery-next" type="button" aria-label="Next image">
+        <span class="gallery-icon">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="project-footer">
+    <p class="tags">
+      Python / PyTorch / OpenCV / CNN / Residual Learning / Image Deblurring / Computer Vision
+    </p>
+
+    <a href="assets/project5/main.pdf" target="_blank" class="pdf-btn">
+      Open Project PDF
+    </a>
+  </div>
+</div>
+
+
+  <footer>
+    <p>© 2026 Tsai Zhou-Wei</p>
+  </footer>
+
+  <script>
+    const projectMediaBlocks = document.querySelectorAll(".project-media");
+
+    projectMediaBlocks.forEach((mediaBlock) => {
+      const images = Array.from(mediaBlock.querySelectorAll(".gallery-image"));
+      const prevButton = mediaBlock.querySelector(".gallery-prev");
+      const nextButton = mediaBlock.querySelector(".gallery-next");
+
+      if (images.length === 0) return;
+
+      let currentIndex = 0;
+      const visibleImageCount = 3;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 768) {
+          return 1;
+        }
+
+        return Math.min(visibleImageCount, images.length);
+      }
+
+      function updateGallery(clickedButton = null) {
+        images.forEach((image) => {
+          image.classList.remove("is-visible");
+          image.style.order = "";
+        });
+
+        const count = getVisibleCount();
+
+        for (let i = 0; i < count; i++) {
+          const imageIndex = (currentIndex + i) % images.length;
+          images[imageIndex].classList.add("is-visible");
+          images[imageIndex].style.order = i;
+        }
+
+        if (clickedButton) {
+          const icon = clickedButton.querySelector(".gallery-icon");
+          icon.classList.remove("rotate");
+          void icon.offsetWidth;
+          icon.classList.add("rotate");
+        }
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery(nextButton);
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery(prevButton);
+      });
+
+      window.addEventListener("resize", () => {
+        updateGallery();
+      });
+
+      updateGallery();
+    });
+  </script>
 
 </body>
 </html>
