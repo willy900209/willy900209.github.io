@@ -187,6 +187,7 @@ section h2::after {
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
+/* index.html 保持原本 hover 上浮效果 */
 .education-card,
 .skill-card,
 .project-card {
@@ -799,4 +800,18 @@ footer {
   .camp-description p {
     line-height: 1.75;
   }
+}
+
+/* ===============================
+   Projects page only
+   projects.html 不晃動，但保留陰影
+   =============================== */
+
+.projects-page .project-card {
+  transition: box-shadow 0.18s ease;
+}
+
+.projects-page .project-card:hover {
+  transform: none;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
 }
